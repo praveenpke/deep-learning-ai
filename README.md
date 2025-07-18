@@ -18,6 +18,7 @@ A comprehensive quick reference guide for LangChain with working examples and be
 - **Streaming**: Real-time LLM output
 - **LCEL**: LangChain Expression Language for declarative chain composition
 - **Function Calling**: OpenAI Function Calling with Pydantic models
+- **Tagging & Extraction**: Structured data extraction and text tagging
 
 ---
 
@@ -47,9 +48,9 @@ A comprehensive quick reference guide for LangChain with working examples and be
 
 ## 📚 Cheatsheets
 
-This repository contains three comprehensive cheatsheets:
+This repository contains four comprehensive cheatsheets:
 
-### 🔗 **langchain_cheatsheet.py** - Core LangChain Components
+### 🔗 **L1-langchain_cheatsheet.py** - Core LangChain Components
 Complete reference for all major LangChain features including models, prompts, memory, chains, agents, and more.
 
 ### ⚡ **L2-lcel-cheatsheet.py** - LangChain Expression Language (LCEL)
@@ -57,6 +58,9 @@ Advanced patterns using LCEL for declarative chain composition, function binding
 
 ### 🎯 **L3-function-cheatsheet.py** - OpenAI Function Calling
 Comprehensive guide to OpenAI Function Calling with Pydantic models, including validation, binding, and advanced patterns.
+
+### 📊 **L4-tagging-and-extraction.py** - Tagging and Extraction
+Structured data extraction and text tagging using OpenAI functions, including document processing and batch operations.
 
 ---
 
@@ -180,6 +184,30 @@ print(response)
 
 ---
 
+### 6️⃣ Text Tagging and Extraction
+```python
+from pydantic import BaseModel, Field
+from langchain.utils.openai_functions import convert_pydantic_to_openai_function
+from langchain_openai import ChatOpenAI
+
+# Define tagging schema
+class Tagging(BaseModel):
+    """Tag the piece of text with particular info."""
+    sentiment: str = Field(description="sentiment of text")
+    language: str = Field(description="language of text")
+
+# Convert to function and use
+tagging_function = convert_pydantic_to_openai_function(Tagging)
+model = ChatOpenAI()
+model_with_function = model.bind(functions=[tagging_function])
+
+# Tag text
+response = model_with_function.invoke("I love this product!")
+print(response)
+```
+
+---
+
 ## 🌈 Visual Guide
 
 > **Section Highlights:**
@@ -209,6 +237,9 @@ python L2-lcel-cheatsheet.py
 
 # OpenAI Function Calling with Pydantic
 python L3-function-cheatsheet.py
+
+# Tagging and Extraction
+python L4-tagging-and-extraction.py
 ```
 
 ---
