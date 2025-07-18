@@ -17,6 +17,7 @@ A comprehensive quick reference guide for LangChain with working examples and be
 - **Evaluation**: Response quality checks
 - **Streaming**: Real-time LLM output
 - **LCEL**: LangChain Expression Language for declarative chain composition
+- **Function Calling**: OpenAI Function Calling with Pydantic models
 
 ---
 
@@ -46,13 +47,16 @@ A comprehensive quick reference guide for LangChain with working examples and be
 
 ## 📚 Cheatsheets
 
-This repository contains two comprehensive cheatsheets:
+This repository contains three comprehensive cheatsheets:
 
 ### 🔗 **langchain_cheatsheet.py** - Core LangChain Components
 Complete reference for all major LangChain features including models, prompts, memory, chains, agents, and more.
 
 ### ⚡ **L2-lcel-cheatsheet.py** - LangChain Expression Language (LCEL)
 Advanced patterns using LCEL for declarative chain composition, function binding, fallbacks, and parallel processing.
+
+### 🎯 **L3-function-cheatsheet.py** - OpenAI Function Calling
+Comprehensive guide to OpenAI Function Calling with Pydantic models, including validation, binding, and advanced patterns.
 
 ---
 
@@ -151,6 +155,31 @@ print(result)
 
 ---
 
+### 5️⃣ OpenAI Function Calling
+```python
+from pydantic import BaseModel, Field
+from langchain.utils.openai_functions import convert_pydantic_to_openai_function
+from langchain_openai import ChatOpenAI
+
+# Define a function with Pydantic
+class WeatherSearch(BaseModel):
+    """Call this with an airport code to get the weather at that airport"""
+    airport_code: str = Field(description="airport code to get weather for")
+
+# Convert to OpenAI function
+weather_function = convert_pydantic_to_openai_function(WeatherSearch)
+
+# Bind to model
+model = ChatOpenAI()
+model_with_function = model.bind(functions=[weather_function])
+
+# Use the function
+response = model_with_function.invoke("what is the weather in SF?")
+print(response)
+```
+
+---
+
 ## 🌈 Visual Guide
 
 > **Section Highlights:**
@@ -177,6 +206,9 @@ python langchain_cheatsheet.py
 
 # LCEL patterns and advanced composition
 python L2-lcel-cheatsheet.py
+
+# OpenAI Function Calling with Pydantic
+python L3-function-cheatsheet.py
 ```
 
 ---
