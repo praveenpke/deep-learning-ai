@@ -26,6 +26,19 @@ except FileNotFoundError:
 # SECTION 1: PYDANTIC BASICS
 # =============================================================================
 # Understanding Pydantic data classes and validation
+# 
+# WHY WE USE THIS:
+# - Data Validation: Ensure data meets expected types and constraints
+# - Type Safety: Catch errors at runtime with proper type checking
+# - Clean Code: Write more maintainable and self-documenting code
+# - Foundation: Pydantic is the basis for OpenAI function definitions
+#
+# SCENARIOS:
+# - Building APIs that need input validation
+# - Creating data processing pipelines
+# - Implementing configuration management
+# - Building systems that handle user input
+# - Creating applications that need data integrity
 # =============================================================================
 
 from typing import List
@@ -80,6 +93,19 @@ def pydantic_basics_example():
 # SECTION 2: PYDANTIC TO OPENAI FUNCTION CONVERSION
 # =============================================================================
 # Converting Pydantic models to OpenAI function definitions
+# 
+# WHY WE USE THIS:
+# - Function Definition: Convert Pydantic models into OpenAI function schemas
+# - Structured Outputs: Get consistent, structured responses from LLMs
+# - API Integration: Enable LLMs to call external APIs and services
+# - Type Safety: Ensure function calls have proper validation
+#
+# SCENARIOS:
+# - Building AI systems that need to call external APIs
+# - Creating chatbots that can perform actions
+# - Implementing data extraction from text
+# - Building applications that need structured outputs
+# - Creating AI assistants with tool capabilities
 # =============================================================================
 
 from langchain.utils.openai_functions import convert_pydantic_to_openai_function
@@ -120,6 +146,19 @@ def function_conversion_example():
 # SECTION 3: BASIC FUNCTION CALLING
 # =============================================================================
 # Using functions with ChatOpenAI models
+# 
+# WHY WE USE THIS:
+# - Model Integration: Bind functions directly to LLM models
+# - Dynamic Function Selection: Let the LLM choose which function to call
+# - Flexible Invocation: Call functions either directly or through binding
+# - Real-time Decision Making: AI decides when and how to use functions
+#
+# SCENARIOS:
+# - Building AI assistants that can use tools
+# - Creating chatbots with external capabilities
+# - Implementing systems that need dynamic tool selection
+# - Building applications that combine AI with external services
+# - Creating intelligent automation systems
 # =============================================================================
 
 from langchain_openai import ChatOpenAI
@@ -152,6 +191,19 @@ def basic_function_calling():
 # SECTION 4: FORCED FUNCTION CALLING
 # =============================================================================
 # Forcing the model to use specific functions
+# 
+# WHY WE USE THIS:
+# - Controlled Execution: Ensure specific functions are called regardless of input
+# - Predictable Behavior: Force AI to use certain tools in specific scenarios
+# - Workflow Control: Direct the AI's decision-making process
+# - Testing and Debugging: Verify function behavior in controlled environments
+#
+# SCENARIOS:
+# - Building applications that need consistent function calls
+# - Creating systems with specific workflow requirements
+# - Implementing testing frameworks for AI functions
+# - Building applications where you need to control AI behavior
+# - Creating systems that require specific tool usage patterns
 # =============================================================================
 
 def forced_function_calling():
@@ -184,6 +236,19 @@ def forced_function_calling():
 # SECTION 5: FUNCTIONS IN CHAINS
 # =============================================================================
 # Using function-bound models in LangChain chains
+# 
+# WHY WE USE THIS:
+# - Chain Integration: Combine function calling with LangChain's powerful chain system
+# - Complex Workflows: Build sophisticated applications that use functions in chains
+# - Modular Design: Create reusable components that can use functions
+# - Scalable Architecture: Build applications that can grow in complexity
+#
+# SCENARIOS:
+# - Building complex AI applications with multiple steps
+# - Creating systems that need both function calling and chain processing
+# - Implementing multi-step workflows with external tool usage
+# - Building applications that combine different AI capabilities
+# - Creating enterprise-grade AI systems
 # =============================================================================
 
 from langchain.prompts import ChatPromptTemplate
@@ -220,6 +285,19 @@ def functions_in_chains():
 # SECTION 6: MULTIPLE FUNCTIONS
 # =============================================================================
 # Using multiple functions and letting the LLM choose
+# 
+# WHY WE USE THIS:
+# - Tool Diversity: Provide multiple tools for the AI to choose from
+# - Intelligent Selection: Let the AI decide which tool is best for each task
+# - Flexible Capabilities: Build systems that can handle various types of requests
+# - Scalable Tool Sets: Add new functions without changing core logic
+#
+# SCENARIOS:
+# - Building AI assistants with multiple capabilities
+# - Creating systems that need to handle diverse user requests
+# - Implementing platforms with extensible tool sets
+# - Building applications that integrate with multiple services
+# - Creating AI systems that can adapt to different use cases
 # =============================================================================
 
 def multiple_functions_example():
@@ -262,6 +340,19 @@ def multiple_functions_example():
 # SECTION 7: ADVANCED PATTERNS
 # =============================================================================
 # Advanced function calling patterns for production use
+# 
+# WHY WE USE THIS:
+# - Complex Validation: Handle sophisticated data validation requirements
+# - Nested Structures: Work with complex, hierarchical data models
+# - Production Patterns: Use proven patterns for real-world applications
+# - Scalable Design: Build systems that can handle complex requirements
+#
+# SCENARIOS:
+# - Building enterprise applications with complex data models
+# - Creating systems that need sophisticated validation
+# - Implementing applications with nested data structures
+# - Building production-grade AI systems
+# - Creating applications that need to handle complex user data
 # =============================================================================
 
 def advanced_patterns():

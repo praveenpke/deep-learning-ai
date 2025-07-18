@@ -23,6 +23,20 @@ except FileNotFoundError:
 # SECTION 1: BASIC TAGGING
 # =============================================================================
 # Tagging text with specific attributes like sentiment and language
+# 
+# WHY WE USE THIS:
+# - Content Classification: Automatically categorize text content
+# - Sentiment Analysis: Understand the emotional tone of text
+# - Language Detection: Identify the language of text automatically
+# - Content Moderation: Flag inappropriate or problematic content
+# - Data Organization: Structure unstructured text data
+#
+# SCENARIOS:
+# - Building social media monitoring tools
+# - Creating content moderation systems
+# - Implementing customer feedback analysis
+# - Building multilingual applications
+# - Creating content recommendation systems
 # =============================================================================
 
 from typing import List
@@ -81,6 +95,20 @@ def basic_tagging_example():
 # SECTION 2: BASIC EXTRACTION
 # =============================================================================
 # Extracting structured information from text
+# 
+# WHY WE USE THIS:
+# - Data Extraction: Convert unstructured text into structured data
+# - Information Retrieval: Pull specific information from large text documents
+# - Data Processing: Automate the extraction of key information
+# - Content Analysis: Identify and extract entities from text
+# - Database Population: Extract data to populate databases
+#
+# SCENARIOS:
+# - Building resume parsing systems
+# - Creating invoice processing applications
+# - Implementing contact information extraction
+# - Building document analysis tools
+# - Creating data entry automation systems
 # =============================================================================
 
 def basic_extraction_example():
@@ -133,6 +161,20 @@ def basic_extraction_example():
 # SECTION 3: DOCUMENT PROCESSING
 # =============================================================================
 # Processing larger documents with tagging and extraction
+# 
+# WHY WE USE THIS:
+# - Large Document Analysis: Process lengthy documents efficiently
+# - Content Summarization: Generate summaries of large text documents
+# - Document Classification: Categorize and organize large document collections
+# - Information Discovery: Find key information in large documents
+# - Automated Document Review: Process documents without manual reading
+#
+# SCENARIOS:
+# - Building legal document analysis systems
+# - Creating research paper processing tools
+# - Implementing automated report generation
+# - Building content management systems
+# - Creating automated document review systems
 # =============================================================================
 
 def document_processing_example():
@@ -177,6 +219,20 @@ def document_processing_example():
 # SECTION 4: PAPER EXTRACTION
 # =============================================================================
 # Extracting academic papers and references from text
+# 
+# WHY WE USE THIS:
+# - Academic Research: Automate the extraction of research papers and citations
+# - Literature Review: Build comprehensive bibliographies automatically
+# - Research Analysis: Identify and extract academic references
+# - Citation Management: Organize and track academic citations
+# - Knowledge Discovery: Find relevant research papers in large documents
+#
+# SCENARIOS:
+# - Building academic research tools
+# - Creating literature review assistants
+# - Implementing citation management systems
+# - Building research paper analysis tools
+# - Creating academic writing assistants
 # =============================================================================
 
 def paper_extraction_example():
@@ -237,6 +293,20 @@ def paper_extraction_example():
 # SECTION 5: BATCH PROCESSING
 # =============================================================================
 # Processing large documents by splitting and processing chunks
+# 
+# WHY WE USE THIS:
+# - Scalability: Process large documents that exceed token limits
+# - Efficiency: Handle massive amounts of text data efficiently
+# - Memory Management: Process documents without running out of memory
+# - Parallel Processing: Process multiple chunks simultaneously
+# - Large-scale Analysis: Analyze entire document collections
+#
+# SCENARIOS:
+# - Building large-scale document processing systems
+# - Creating data mining applications
+# - Implementing content analysis at scale
+# - Building automated content processing pipelines
+# - Creating systems that process entire libraries of documents
 # =============================================================================
 
 def batch_processing_example():
@@ -314,6 +384,20 @@ def batch_processing_example():
 # SECTION 6: ADVANCED EXTRACTION PATTERNS
 # =============================================================================
 # Advanced patterns for complex extraction scenarios
+# 
+# WHY WE USE THIS:
+# - Complex Data Models: Handle sophisticated data structures and relationships
+# - Nested Information: Extract information with multiple levels of detail
+# - Conditional Extraction: Extract different types of information based on context
+# - Production Patterns: Use proven patterns for real-world applications
+# - Scalable Architecture: Build systems that can handle complex requirements
+#
+# SCENARIOS:
+# - Building enterprise data extraction systems
+# - Creating complex document processing applications
+# - Implementing systems that need to extract hierarchical data
+# - Building applications with conditional data extraction
+# - Creating production-grade content analysis systems
 # =============================================================================
 
 def advanced_extraction_patterns():

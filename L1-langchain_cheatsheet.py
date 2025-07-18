@@ -25,6 +25,18 @@ except FileNotFoundError:
 # SECTION 1: MODEL, PROMPT, OUTPUT PARSER
 # =============================================================================
 # Core components for working with LLMs, creating prompts, and parsing responses
+# 
+# WHY WE USE THIS:
+# - Models: The foundation of any LLM application - they generate responses
+# - Prompts: Control how we communicate with models to get desired outputs
+# - Output Parsers: Convert unstructured model responses into structured data
+#
+# SCENARIOS:
+# - Building chatbots and conversational AI
+# - Creating content generation systems
+# - Converting free-form text into structured formats (JSON, CSV, etc.)
+# - Implementing Q&A systems with specific response formats
+# - Building applications that need consistent, structured outputs
 # =============================================================================
 
 # Model
@@ -90,6 +102,18 @@ class Person(BaseModel):
 # SECTION 2: MEMORY
 # =============================================================================
 # Managing conversation history and context across interactions
+# 
+# WHY WE USE THIS:
+# - ConversationBufferMemory: Maintains full conversation history for context
+# - ConversationSummaryMemory: Summarizes long conversations to stay within token limits
+# - Memory allows AI to remember previous interactions and maintain context
+#
+# SCENARIOS:
+# - Building chatbots that need to remember user preferences
+# - Creating customer service bots that maintain conversation context
+# - Implementing AI assistants that learn from conversation history
+# - Building applications where context matters across multiple interactions
+# - Managing long conversations without hitting token limits
 # =============================================================================
 
 # ConversationBufferMemory
@@ -119,6 +143,18 @@ summary_memory = ConversationSummaryMemory(
 # SECTION 3: CHAINS
 # =============================================================================
 # Combining multiple components to create complex workflows
+# 
+# WHY WE USE THIS:
+# - LLMChain: Simple chains that combine prompts with models
+# - SequentialChain: Complex workflows where output from one step feeds into the next
+# - Chains allow you to build sophisticated AI applications step by step
+#
+# SCENARIOS:
+# - Building content creation pipelines (title → outline → content)
+# - Creating data processing workflows (extract → transform → analyze)
+# - Implementing multi-step AI applications
+# - Building systems that need to chain multiple AI operations
+# - Creating applications where each step depends on previous results
 # =============================================================================
 
 # LLMChain
@@ -162,6 +198,18 @@ seq_chain = SequentialChain(
 # SECTION 4: QnA OVER DOCUMENTS
 # =============================================================================
 # Building question-answering systems over your own documents
+# 
+# WHY WE USE THIS:
+# - Vector Stores: Store document embeddings for efficient similarity search
+# - Retrieval QA: Combine document retrieval with question answering
+# - Allows AI to answer questions based on your specific knowledge base
+#
+# SCENARIOS:
+# - Building knowledge base chatbots for companies
+# - Creating customer support systems with product documentation
+# - Implementing research assistants that can search through papers
+# - Building internal company Q&A systems
+# - Creating educational platforms with textbook Q&A capabilities
 # =============================================================================
 
 # Vector Store Indexing and Querying
@@ -228,6 +276,18 @@ def create_qa_chain(vectorstore):
 # SECTION 5: EVALUATION
 # =============================================================================
 # Assessing the quality and accuracy of LLM responses
+# 
+# WHY WE USE THIS:
+# - Quality Control: Ensure AI responses meet your standards
+# - Performance Monitoring: Track how well your AI system is performing
+# - Continuous Improvement: Identify areas for model or prompt improvement
+#
+# SCENARIOS:
+# - Testing new prompts before deployment
+# - Monitoring production AI systems for quality
+# - A/B testing different model configurations
+# - Validating AI responses against known correct answers
+# - Building automated testing for AI applications
 # =============================================================================
 
 # Manual Evaluation (simplified approach)
@@ -259,6 +319,18 @@ print(f"Evaluation result: {sample_evaluation}")
 # SECTION 6: AGENTS
 # =============================================================================
 # Creating autonomous agents that can use tools and make decisions
+# 
+# WHY WE USE THIS:
+# - Tool Integration: Allow AI to use external tools and APIs
+# - Autonomous Decision Making: AI can choose which tools to use based on the task
+# - Complex Task Execution: Handle multi-step tasks that require different capabilities
+#
+# SCENARIOS:
+# - Building AI assistants that can search the web
+# - Creating agents that can perform calculations
+# - Implementing AI that can interact with databases
+# - Building autonomous research assistants
+# - Creating AI systems that can use multiple external services
 # =============================================================================
 
 # Built-in Tools
@@ -306,6 +378,18 @@ def create_simple_agent():
 # SECTION 7: ADVANCED FEATURES
 # =============================================================================
 # Production-ready features for building robust applications
+# 
+# WHY WE USE THIS:
+# - Streaming: Provide real-time responses for better user experience
+# - Error Handling: Gracefully handle API failures and edge cases
+# - Production Readiness: Build applications that can handle real-world usage
+#
+# SCENARIOS:
+# - Building real-time chat applications
+# - Creating applications that need to handle API rate limits
+# - Implementing robust error recovery systems
+# - Building applications for production deployment
+# - Creating systems that need to handle high user loads
 # =============================================================================
 
 # Streaming

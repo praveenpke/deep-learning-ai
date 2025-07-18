@@ -27,6 +27,18 @@ except FileNotFoundError:
 # SECTION 1: BASIC LCEL SYNTAX
 # =============================================================================
 # Understanding the pipe operator and basic chain composition
+# 
+# WHY WE USE THIS:
+# - Declarative Composition: Build chains using the intuitive pipe operator (|)
+# - Clean Code: Write more readable and maintainable chain definitions
+# - Modular Design: Easily combine and reuse chain components
+#
+# SCENARIOS:
+# - Building simple text processing pipelines
+# - Creating content generation workflows
+# - Implementing basic AI applications
+# - Learning the fundamentals of LCEL
+# - Prototyping new AI features quickly
 # =============================================================================
 
 from langchain.prompts import ChatPromptTemplate
@@ -51,6 +63,18 @@ def simple_chain_example():
 # SECTION 2: COMPLEX CHAINS WITH RETRIEVAL
 # =============================================================================
 # Using RunnableMap to supply user-provided inputs to the prompt
+# 
+# WHY WE USE THIS:
+# - Input Transformation: Transform user inputs before passing to prompts
+# - Dynamic Context: Add retrieved information to prompts dynamically
+# - Complex Data Flow: Handle multiple input sources and transformations
+#
+# SCENARIOS:
+# - Building Q&A systems with document retrieval
+# - Creating chatbots with dynamic context
+# - Implementing systems that need to fetch external data
+# - Building applications with complex input processing
+# - Creating AI systems that combine multiple data sources
 # =============================================================================
 
 from langchain_openai import OpenAIEmbeddings
@@ -98,6 +122,18 @@ def retrieval_example():
 # SECTION 3: FUNCTION BINDING
 # =============================================================================
 # Binding OpenAI Functions to models for structured outputs
+# 
+# WHY WE USE THIS:
+# - Structured Outputs: Get consistent, structured data from LLMs
+# - Function Calling: Enable LLMs to call external functions
+# - Type Safety: Ensure outputs match expected schemas
+#
+# SCENARIOS:
+# - Building APIs that need structured responses
+# - Creating systems that integrate with external services
+# - Implementing data extraction from text
+# - Building applications that need consistent output formats
+# - Creating AI systems that can trigger actions
 # =============================================================================
 
 def function_binding_example():
@@ -178,6 +214,18 @@ def multiple_functions_example():
 # SECTION 4: FALLBACKS
 # =============================================================================
 # Implementing fallback mechanisms for robust chains
+# 
+# WHY WE USE THIS:
+# - Error Recovery: Handle failures gracefully with backup options
+# - Reliability: Ensure your application continues working even when components fail
+# - Production Readiness: Build robust systems that can handle edge cases
+#
+# SCENARIOS:
+# - Building applications that need high availability
+# - Creating systems with multiple model options
+# - Implementing robust error handling
+# - Building applications that can't afford to fail
+# - Creating systems that need to degrade gracefully
 # =============================================================================
 
 from langchain_openai import OpenAI
@@ -215,6 +263,19 @@ def fallback_example():
 # SECTION 5: INTERFACE METHODS
 # =============================================================================
 # Different ways to invoke LCEL chains
+# 
+# WHY WE USE THIS:
+# - Batch Processing: Process multiple inputs efficiently
+# - Streaming: Provide real-time responses for better UX
+# - Async Support: Handle concurrent requests without blocking
+# - Flexibility: Choose the right interface for your use case
+#
+# SCENARIOS:
+# - Building web applications with real-time responses
+# - Creating batch processing systems
+# - Implementing high-throughput APIs
+# - Building applications that need to handle multiple users
+# - Creating systems that need to process large datasets
 # =============================================================================
 
 def interface_examples():
@@ -252,6 +313,19 @@ def interface_examples():
 # SECTION 6: ADVANCED PATTERNS
 # =============================================================================
 # Complex LCEL patterns for production use
+# 
+# WHY WE USE THIS:
+# - Conditional Logic: Route requests based on content or conditions
+# - Parallel Processing: Execute multiple operations simultaneously
+# - Complex Workflows: Build sophisticated AI applications
+# - Production Patterns: Use proven patterns for real-world applications
+#
+# SCENARIOS:
+# - Building intelligent routing systems
+# - Creating applications that need parallel processing
+# - Implementing complex decision-making systems
+# - Building enterprise-grade AI applications
+# - Creating systems that need to handle multiple workflows
 # =============================================================================
 
 def advanced_patterns():
