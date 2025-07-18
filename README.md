@@ -117,6 +117,16 @@ This repository contains four comprehensive cheatsheets designed to take you fro
 ## 💡 Example Use Cases
 
 ### 1️⃣ Simple Chat with OpenAI
+
+**Why we use this:** The foundation of any LLM application - direct interaction with AI models to generate responses.
+
+**When we use this:**
+- Building chatbots and conversational AI
+- Creating content generation systems
+- Implementing simple Q&A systems
+- Testing model responses and capabilities
+- Building applications that need direct AI interaction
+
 ```python
 from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
@@ -133,6 +143,16 @@ print(response.content)
 ---
 
 ### 2️⃣ QnA Over Your Documents
+
+**Why we use this:** Allows AI to answer questions based on your specific knowledge base by retrieving relevant information from documents.
+
+**When we use this:**
+- Building knowledge base chatbots for companies
+- Creating customer support systems with product documentation
+- Implementing research assistants that can search through papers
+- Building internal company Q&A systems
+- Creating educational platforms with textbook Q&A capabilities
+
 ```python
 from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import FAISS
@@ -165,6 +185,16 @@ print(response["result"])
 ---
 
 ### 3️⃣ Custom Agent with Tools
+
+**Why we use this:** Creates autonomous AI agents that can use external tools and make decisions about which tools to use for different tasks.
+
+**When we use this:**
+- Building AI assistants that can search the web
+- Creating agents that can perform calculations
+- Implementing AI that can interact with databases
+- Building autonomous research assistants
+- Creating AI systems that can use multiple external services
+
 ```python
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.tools import tool
@@ -190,6 +220,17 @@ print(result["output"])
 ---
 
 ### 4️⃣ LCEL Chain Composition
+
+**Why we use this:** LCEL provides a declarative, composable way to build complex chains using the pipe operator, making code more readable and maintainable.
+
+**When we use this:**
+- Building complex multi-step workflows
+- Creating reusable chain components
+- Implementing fallback mechanisms
+- Running operations in parallel
+- Binding functions to chains
+- Creating custom output parsers
+
 ```python
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
@@ -210,6 +251,17 @@ print(result)
 ---
 
 ### 5️⃣ OpenAI Function Calling
+
+**Why we use this:** Function calling allows you to define structured schemas that LLMs can use to return data in specific formats, enabling more reliable and structured interactions.
+
+**When we use this:**
+- Extracting structured data from text
+- Building APIs that need consistent output formats
+- Creating tools that LLMs can call
+- Implementing data validation
+- Building agents with specific capabilities
+- Converting between different data formats
+
 ```python
 from pydantic import BaseModel, Field
 from langchain.utils.openai_functions import convert_pydantic_to_openai_function
@@ -235,6 +287,17 @@ print(response)
 ---
 
 ### 6️⃣ Text Tagging and Extraction
+
+**Why we use this:** This specialized pattern helps you extract specific information from text and tag content with metadata, making it perfect for content analysis and data processing.
+
+**When we use this:**
+- Analyzing sentiment in customer feedback
+- Extracting entities from documents
+- Categorizing content automatically
+- Processing large batches of text
+- Building content moderation systems
+- Creating structured datasets from unstructured text
+
 ```python
 from pydantic import BaseModel, Field
 from langchain.utils.openai_functions import convert_pydantic_to_openai_function
