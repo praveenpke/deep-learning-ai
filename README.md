@@ -51,66 +51,16 @@ A comprehensive quick reference guide for LangChain with working examples and be
 This repository contains four comprehensive cheatsheets designed to take you from basic LangChain usage to advanced patterns:
 
 ### 🔗 **L1-langchain_cheatsheet.py** - Core LangChain Components
-
-**Why we use it:** This is your foundation - it covers all the essential LangChain building blocks you need to understand before moving to advanced patterns.
-
-**When we use it:**
-- Learning LangChain for the first time
-- Building simple chatbots and Q&A systems
-- Creating basic document processing workflows
-- Implementing conversation memory
-- Setting up agents with custom tools
-- Evaluating LLM responses
-
-**What's included:** Models, prompts, memory, chains, agents, document Q&A, evaluation, streaming, and advanced features.
-
----
+Complete reference for all major LangChain features including models, prompts, memory, chains, agents, and more.
 
 ### ⚡ **L2-lcel-cheatsheet.py** - LangChain Expression Language (LCEL)
-
-**Why we use it:** LCEL provides a declarative, composable way to build complex chains using the pipe operator (`|`), making your code more readable and maintainable.
-
-**When we use it:**
-- Building complex multi-step workflows
-- Creating reusable chain components
-- Implementing fallback mechanisms
-- Running operations in parallel
-- Binding functions to chains
-- Creating custom output parsers
-
-**What's included:** Chain composition, function binding, fallbacks, parallel processing, and custom components.
-
----
+Advanced patterns using LCEL for declarative chain composition, function binding, fallbacks, and parallel processing.
 
 ### 🎯 **L3-function-cheatsheet.py** - OpenAI Function Calling
-
-**Why we use it:** Function calling allows you to define structured schemas that LLMs can use to return data in specific formats, enabling more reliable and structured interactions.
-
-**When we use it:**
-- Extracting structured data from text
-- Building APIs that need consistent output formats
-- Creating tools that LLMs can call
-- Implementing data validation
-- Building agents with specific capabilities
-- Converting between different data formats
-
-**What's included:** Pydantic models, function conversion, validation, binding, and advanced function calling patterns.
-
----
+Comprehensive guide to OpenAI Function Calling with Pydantic models, including validation, binding, and advanced patterns.
 
 ### 📊 **L4-tagging-and-extraction.py** - Tagging and Extraction
-
-**Why we use it:** This specialized pattern helps you extract specific information from text and tag content with metadata, making it perfect for content analysis and data processing.
-
-**When we use it:**
-- Analyzing sentiment in customer feedback
-- Extracting entities from documents
-- Categorizing content automatically
-- Processing large batches of text
-- Building content moderation systems
-- Creating structured datasets from unstructured text
-
-**What's included:** Text tagging, entity extraction, batch processing, document analysis, and structured data extraction.
+Structured data extraction and text tagging using OpenAI functions, including document processing and batch operations.
 
 ---
 
