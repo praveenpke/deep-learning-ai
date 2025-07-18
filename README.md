@@ -16,6 +16,7 @@ A comprehensive quick reference guide for LangChain with working examples and be
 - **Agents & Tools**: Custom tool integration
 - **Evaluation**: Response quality checks
 - **Streaming**: Real-time LLM output
+- **LCEL**: LangChain Expression Language for declarative chain composition
 
 ---
 
@@ -40,6 +41,18 @@ A comprehensive quick reference guide for LangChain with working examples and be
    ```bash
    export OPENAI_API_KEY="your-openai-api-key-here"
    ```
+
+---
+
+## 📚 Cheatsheets
+
+This repository contains two comprehensive cheatsheets:
+
+### 🔗 **langchain_cheatsheet.py** - Core LangChain Components
+Complete reference for all major LangChain features including models, prompts, memory, chains, agents, and more.
+
+### ⚡ **L2-lcel-cheatsheet.py** - LangChain Expression Language (LCEL)
+Advanced patterns using LCEL for declarative chain composition, function binding, fallbacks, and parallel processing.
 
 ---
 
@@ -118,6 +131,26 @@ print(result["output"])
 
 ---
 
+### 4️⃣ LCEL Chain Composition
+```python
+from langchain.prompts import ChatPromptTemplate
+from langchain_openai import ChatOpenAI
+from langchain.schema.output_parser import StrOutputParser
+
+# LCEL makes chain composition simple with the pipe operator
+prompt = ChatPromptTemplate.from_template("tell me a short joke about {topic}")
+model = ChatOpenAI()
+output_parser = StrOutputParser()
+
+# The magic of LCEL: pipe operator for composition
+chain = prompt | model | output_parser
+
+result = chain.invoke({"topic": "programming"})
+print(result)
+```
+
+---
+
 ## 🌈 Visual Guide
 
 > **Section Highlights:**
@@ -136,10 +169,14 @@ Each section in `langchain_cheatsheet.py` is clearly marked with big comment hea
 
 ## 📄 Usage
 
-Run the cheatsheet to see examples in action:
+Run the cheatsheets to see examples in action:
 
 ```bash
+# Core LangChain components
 python langchain_cheatsheet.py
+
+# LCEL patterns and advanced composition
+python L2-lcel-cheatsheet.py
 ```
 
 ---
